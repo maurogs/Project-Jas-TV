@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+.program_logos {
+	width: 200px;
+	height: 100px;
+}

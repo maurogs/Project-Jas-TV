@@ -1,0 +1,23 @@
+<% @channel.each do |c| %>
+	<h1> <%= c.name %> </h1>
+<% c.programs.each do |p| %>
+<div id='channel_list'>
+	<% if p.picture != nil %>
+
+	<h3> 
+	
+
+<div id='programs_list'>
+
+	<%= image_tag p.picture, class: 'program_logos' %>
+
+</div>
+
+<% end %>
+<% end %>
+
+
+	</h3>
+
+</div>
+<% end %>
