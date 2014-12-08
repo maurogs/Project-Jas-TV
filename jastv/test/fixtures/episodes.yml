@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  program_id: 
+  channel_id: 
+  showed_at: 2014-12-08 10:28:33
+
+two:
+  program_id: 
+  channel_id: 
+  showed_at: 2014-12-08 10:28:33

@@ -1,3 +1,6 @@
 class Program < ActiveRecord::Base
-	belongs_to :channels
+	has_many :episodes
+	has_many :channels, ->() { distinct }, through: :episodes
+
+	validates :name, uniqueness: true
 end

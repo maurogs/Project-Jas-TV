@@ -1,7 +1,5 @@
-<% @channel.programs.each do |p| %>
-
-<div id='programs_list'>
-	<h1> <%= p.name %> </h1>
-
-</div>
+<% @programs.each do |program| %>
+	<div id='programs_list'>
+		<h1> <%= program.name %> </h1>
+	</div>
 <% end %>

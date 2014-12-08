@@ -1,23 +1,16 @@
-<% @channel.each do |c| %>
-	<h1> <%= c.name %> </h1>
-<% c.programs.each do |p| %>
-<div id='channel_list'>
-	<% if p.picture != nil %>
+<% @channels.each do |channel| %>
 
-	<h3> 
+	<% if channel.programs.present? %>
+		<h2> <%= channel.name %> </h2>
 	
+		<% channel.programs.each do |program| %>
+			<div class='channel_list'>
 
-<div id='programs_list'>
+			<h3 class='programs_list'> 
+				<%= image_tag picture_for_program(program), class: 'program_logos' %>
+			</h3>
 
-	<%= image_tag p.picture, class: 'program_logos' %>
-
-</div>
-
-<% end %>
-<% end %>
-
-
-	</h3>
-
-</div>
+			</div>
+		<% end %>
+	<% end %>
 <% end %>
