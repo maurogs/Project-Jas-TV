@@ -10,10 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+ *= require logos
+ *= require site
+ *= require channels
+ *= require programs
+ *= require marketing
+ *= require pure-min
+ *= require grids-responsive-min
  */
-.program_logos {
-	width: 200px;
-	height: 100px;
-}
