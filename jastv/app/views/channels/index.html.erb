@@ -1,16 +1,37 @@
-<% @channels.each do |channel| %>
 
-	<% if channel.programs.present? %>
-		<h2> <%= channel.name %> </h2>
-	
-		<% channel.programs.each do |program| %>
-			<div class='channel_list'>
 
-			<h3 class='programs_list'> 
-				<%= image_tag picture_for_program(program), class: 'program_logos' %>
-			</h3>
+<div class="table">
+<table class="pure-table" id="table-x" border="10">
+  <thead>
+    <tr>
+      <th> CHANNEL</th>
 
-			</div>
-		<% end %>
-	<% end %>
-<% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+
+  	<% @channels.each do |channel| %>
+
+	  <tr>
+        <td id="channel_img">
+ 			<h2> <%= channel.name %> </h2>
+      	</td>
+	 
+
+	<% channel.programs.each do |program| %>     
+
+        <td>  
+        	<%= image_tag picture_for_program(program), class: 'program_logos' %> 
+        </td>
+    <% end %>
+    	
+	   </tr>
+    
+    <% end %>
+
+  </tbody>
+</table> 
+</div>
+
+
