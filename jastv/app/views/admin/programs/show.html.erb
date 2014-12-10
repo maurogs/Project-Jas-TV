@@ -1,0 +1,32 @@
+<table class="episode_table" border="10">
+  <thead>
+    <tr>
+      <th> EPISODE NAME </th>
+      <th> CHANNEL</th>
+      <th> DATETIME</th>
+      <th> ACTIONS</th>
+    </tr>
+  </thead>
+
+  <tbody>
+     <%= content_tag_for :tr, @program do |programs| %>
+        <% programs.episodes.each do |episode| %> 
+      <tr>
+       <td> <%= episode.program.name %> </td>
+       <td> <%= episode.channel.name %> </td>
+       <td> <%= episode.showed_at %> </td>  
+       <td> <%= link_to('Edit', edit_admin_episode_path(episode)) %> 
+            <%= link_to('Delete', admin_episode_path(episode), method: :delete) %>
+       </td>  
+       </tr>        
+      <% end %>
+     <% end %>
+     <tr>
+     	<th> <%= link_to('ADD EPISODE', new_admin_program_episode_path(@program)) %> </th>
+     	<th> <%= link_to('ADD PROGRAMS', admin_programs_path(@program)) %> </th>
+      <th> </th>
+     </th>
+      <th> <%= link_to('Back', admin_programs_path) %> </th>
+     </tr>
+  </tbody>
+</table> 

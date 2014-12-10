@@ -1,0 +1,22 @@
+<table class="channel_table" border="10">
+  <thead>
+    <tr>
+      <th> PROGRAM NAME </th>
+      <th> ACTIONS</th>
+    </tr>
+  </thead>
+
+  <tbody>
+     <%= content_tag_for :tr, @programs do |program| %>
+        <td> ID: <%= program.id %> --- <%= link_to(program.name, admin_program_path(program)) %> </td>
+        <td> <%= link_to('Edit', edit_admin_program_path(program)) %> 
+			       <%= link_to('Delete', admin_program_path(program), method: :delete, data: {confirm: 'Are you sure?'}) %>
+        </td>
+
+     <% end %>
+     <tr>
+     	<th> <%= link_to('ADD PROGRAMS', new_admin_program_path()) %> </th>
+     	<th> 'ADD CHAPTERS'	</th>
+     </tr>
+  </tbody>
+</table> 

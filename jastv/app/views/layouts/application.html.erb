@@ -7,7 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="">Jas TV</a>
 
+        <ul>
+            <li class="pure-menu-selected"> <a href="<%= admin_channels_path %>"> Channels </a></li>
+            <li><a href="http://localhost:3000/admin/programs"> Programs </a></li>
+            <li><a href="<%= %>"> Episodes </a></li>
+        </ul>
+    </div>
+</div>
+</header>
 <%= yield %>
 
 </body>

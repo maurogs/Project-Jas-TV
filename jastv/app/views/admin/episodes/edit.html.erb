@@ -1,0 +1,18 @@
+<div>
+	
+<h1>Edit </h1>
+
+
+<%= form_for [:admin, @episodes_edit] do |f| %>
+	<%= f.label :channel_id %>
+	<%= f.collection_select :channel_id, Channel.all, :id, :name %>
+	<br>
+	<%= f.label :showed_at %>
+	<%= f.date_field :showed_at %>
+	<br>
+	<%= f.submit 'Save' %>
+	<%= link_to 'Cancel', admin_program_path(@episodes_edit.program) %>
+<% end %>
+
+
+</div>

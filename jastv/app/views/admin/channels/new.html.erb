@@ -1,0 +1,18 @@
+<div>
+	
+<h1>New Channel</h1>
+
+
+<%= form_for [:admin, @channel] do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :picture %>
+	<%= f.text_field :picture %>
+	<br>
+	<%= f.submit 'Save' %>
+	<%= link_to 'Cancel',  admin_channels_path %>
+<% end %>
+
+
+</div>
