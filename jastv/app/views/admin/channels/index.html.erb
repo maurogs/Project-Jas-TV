@@ -1,0 +1,38 @@
+
+<div class="table">
+<table class="pure-table" border="10">
+  <thead>
+    <tr>
+      <th> CHANNEL NAME </th>
+      <th> ACTIONS</th>
+    </tr>
+  </thead>
+
+  <tbody>
+     <%= content_tag_for :tr, @channels do |channel| %>
+        <td> ID: <%= channel.id %> -- <%= link_to(channel.name, admin_channel_path(channel)) %> </td>
+        <td> <%= link_to('Edit', edit_admin_channel_path(channel)) %> 
+			 <%= link_to('Delete', admin_channel_path(channel), method: :delete, data: {confirm: 'Are you sure?'}) %>
+        </td>
+
+     <% end %>
+     <tr> 	
+      <th> 
+      
+        <div class="pure-button">  
+          <%= link_to('ADD CHANNEL', new_admin_channel_path()) %> 
+        </div>
+     
+      </th> 
+     	<th> 
+      
+      <div class="pure-button">  
+      <%= link_to('ADD PROGRAMS', admin_programs_path) %> 
+      </div>
+      
+      </th>
+     </tr>
+
+  </tbody>
+</table> 
+</div>

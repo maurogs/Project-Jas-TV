@@ -1,4 +1,5 @@
-<table class="episode_table" border="10">
+<div class="table">
+<table class="pure-table" id="table-long" border="10">
   <thead>
     <tr>
       <th> EPISODE NAME </th>
@@ -22,11 +23,20 @@
       <% end %>
      <% end %>
      <tr>
-     	<th> <%= link_to('ADD EPISODE', new_admin_program_episode_path(@program)) %> </th>
-     	<th> <%= link_to('ADD PROGRAMS', admin_programs_path(@program)) %> </th>
+     	<th> 
+     <div class="pure-button">
+      <%= link_to('ADD EPISODE', new_admin_program_episode_path(@program)) %> 
+     </div>
+      </th>
       <th> </th>
-     </th>
-      <th> <%= link_to('Back', admin_programs_path) %> </th>
+      <th> </th>
+
+    <div class="pure-button">
+      <th> <%= link_to('Back', admin_programs_path) %> 
+    </div>
+
+      </th>
      </tr>
   </tbody>
 </table> 
+</div>

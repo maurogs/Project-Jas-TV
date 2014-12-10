@@ -1,7 +1,15 @@
-<table class="channel_table" border="10">
+
+<div class="table">
+<table class="pure-table" border="10">
   <thead>
     <tr>
-      <th> PROGRAM NAME </th>
+      <th> 
+        PROGRAM LIST
+      <div class="pure-button">    
+      <%= link_to('ADD PROGRAMS', new_admin_program_path()) %> 
+      </div>
+
+      </th>
       <th> ACTIONS</th>
     </tr>
   </thead>
@@ -15,8 +23,14 @@
 
      <% end %>
      <tr>
-     	<th> <%= link_to('ADD PROGRAMS', new_admin_program_path()) %> </th>
-     	<th> 'ADD CHAPTERS'	</th>
+     	<th> 
+
+      <div class="pure-button">    
+      <%= link_to('ADD PROGRAMS', new_admin_program_path()) %> 
+      </div>
+
+      </th>
      </tr>
   </tbody>
 </table> 
+</div>

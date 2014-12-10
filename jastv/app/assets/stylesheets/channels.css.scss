@@ -2,20 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.channel_table{
-	width: 30%;
+.pure-table{
+	width: 32%;
 	position: relative;
 	top: 0px;
 	left: 450px;
 
 }
 
-.episode_table{
-	width: 50%;
+// .table{
+// 	width: 100%;
+// 	margin: 0 auto;
+// }
+
+
+
+.pure-form-aligned{
 	position: relative;
 	top: 0px;
-	left: 300px;
+	left: 500px;
+	width: 400px;
 
 }
 
+#table-long{
+	width: 44%;
+	left: 360px;
+}
 

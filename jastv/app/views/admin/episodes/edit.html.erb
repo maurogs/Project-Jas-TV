@@ -1,4 +1,4 @@
-<div>
+<div class="pure-form pure-form-aligned">
 	
 <h1>Edit </h1>
 
@@ -6,12 +6,24 @@
 <%= form_for [:admin, @episodes_edit] do |f| %>
 	<%= f.label :channel_id %>
 	<%= f.collection_select :channel_id, Channel.all, :id, :name %>
+
 	<br>
+	<br>
+
 	<%= f.label :showed_at %>
 	<%= f.date_field :showed_at %>
+	
 	<br>
+	<br>
+
 	<%= f.submit 'Save' %>
+	
+	<br>
+	<br>
+
+	<div class="pure-button">  	
 	<%= link_to 'Cancel', admin_program_path(@episodes_edit.program) %>
+	</div>
 <% end %>
 
 

@@ -1,0 +1,10 @@
+<% @programs.each do |program| %>
+	
+	<% program.episodes.each do |episode| %>
+
+			<h1> <%= episode.program.name %> </h1>
+
+
+	<% end %>
+
+<% end %>

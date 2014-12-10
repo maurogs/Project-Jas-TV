@@ -1,26 +1,37 @@
-<div>
+<div class="pure-form pure-form-aligned">
 	
 <h1>Edit Programs</h1>
 
 
 <%= form_for [:admin, @programs_edit] do |f| %>
+
 	<%= f.label :name %>
 	<%= f.text_field :name %>
-	<br>
+
+	
 	<%= f.label :picture %>
 	<%= f.text_field :picture %>
-	<br>
+
+	
 	<%= f.label :genre %>
 	<%= f.text_field :genre %>
-	<br>
+
+	
 	<%= f.label :website %>
 	<%= f.text_field :website %>
-	<br>
+	
+
+	
 	<%= f.label :time_start %>
 	<%= f.number_field :time_start %>
+	
 	<br>
+	
 	<%= f.submit 'Save' %>
+    <div class="pure-button">  
 	<%= link_to 'Cancel',  admin_programs_path %>
+	</div>
+
 <% end %>
 
 

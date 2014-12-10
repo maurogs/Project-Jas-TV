@@ -1,17 +1,24 @@
-<div>
+<div class="pure-form pure-form-aligned">
 	
 <h1>Edit Channels</h1>
 
 
 <%= form_for [:admin, @channel_edit] do |f| %>
+
 	<%= f.label :name %>
 	<%= f.text_field :name %>
-	<br>
+
+
 	<%= f.label :picture %>
 	<%= f.text_field :picture %>
+
 	<br>
+
 	<%= f.submit 'Save' %>
+
+	<div class="pure-button">  
 	<%= link_to 'Cancel',  admin_channels_path %>
+	</div>
 <% end %>
 
 

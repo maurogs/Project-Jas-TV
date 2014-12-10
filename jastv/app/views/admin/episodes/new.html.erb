@@ -1,20 +1,38 @@
-<div>
+<div class="pure-form pure-form-aligned">
 	
 <h1>New Episode</h1>
 
+<br>
 
 <%= form_for [:admin, @program, @episodes] do |f| %>
 	<%= f.label :program_id %>
 	<%= f.collection_select :program_id, Program.all, :id, :name %>
+
 	<br>
-	<%= f.label :showed_at %>
+	<br>
+	
+	<%= f.label :channel_id %>
 	<%= f.collection_select :channel_id, Channel.all, :id, :name %>
+
 	<br>
+	<br>
+	
 	<%= f.label :showed_at %>
 	<%= f.date_field :showed_at %>
+	
 	<br>
+	<br>
+	
 	<%= f.submit 'Save' %>
+	
+	<br>
+	<br>
+
+
+	<div class="pure-button">
 	<%= link_to 'Cancel', admin_program_path(@program) %>
+	</div>
+
 <% end %>
 
 
