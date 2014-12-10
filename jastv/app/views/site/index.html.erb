@@ -1,10 +1,47 @@
-<% @programs.each do |program| %>
-	
+
+
+
+
+<div class="table">
+<table class="pure-table" id="table-xl" border="10">
+  <thead>
+    <tr>
+      <th> CHANNEL</th>
+      <th> PROGRAM </th>
+      <th> EPISODES </th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+  	<% @programs.each do |program| %>
 	<% program.episodes.each do |episode| %>
+	
+	  <tr>
+        
+        <td id="channel_img">
+        	<%= image_tag(episode.channel.picture) %>
+        </td>
 
-			<h1> <%= episode.program.name %> </h1>
+        <td>  
+        	<%= image_tag picture_for_program(program), class: 'program_logos' %> 
+        </td>
+
+        <td> <%= episode.showed_at %> </td>
 
 
-	<% end %>
+	  </tr>
 
-<% end %>
+      <tr> 	
+      	<th> </th> 
+      	<th> </th>
+      </tr>
+
+    <% end %>
+    <% end %>
+
+  </tbody>
+</table> 
+</div>
+
+
