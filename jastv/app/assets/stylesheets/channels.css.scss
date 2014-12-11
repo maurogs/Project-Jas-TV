@@ -2,11 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+td img{
+	width: 100%;
+}
+
+th{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.channel_header img{
+	vertical-align: middle;
+	// position: relative;
+	// left: 80px;
+	width: 60%;
+
+
+}
+
 .pure-table{
 	width: 32%;
 	position: relative;
 	top: 0px;
-	left: 450px;
+	left: 100px;
 
 }
 
@@ -14,9 +32,9 @@
 
 #final_table{
 	width: 85%;
-	position: relative;
-	// left: 100px;
-	left: 10px;
+	// position: relative;
+	// // left: 100px;
+	// left: 10px;
 }
 
 // .table{
@@ -66,8 +84,4 @@
 	background-color: rgba(243, 243, 243, 1);
 }
 
-.channel_header{
-	vertical-align: middle;
-	position: relative;
-	left: 80px;
-}
+
