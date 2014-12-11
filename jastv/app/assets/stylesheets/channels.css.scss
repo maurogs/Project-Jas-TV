@@ -12,19 +12,23 @@
 
 
 
-// #final_table{
-// 	width: 77%;
-// 	height:1200px;
-// 	position: relative;
-// 	left: 150px;
-// }
+#final_table{
+	width: 85%;
+	position: relative;
+	// left: 100px;
+	left: 10px;
+}
 
 // .table{
 // 	width: 100%;
 // 	margin: 0 auto;
 // }
 
-
+#user-form{
+	width: 30%;
+	position: relative;
+	left: 430px;
+}
 
 .pure-form-aligned{
 	position: relative;
@@ -50,4 +54,20 @@
 	left: 12px;
 }
 
+#body{
+	// background-color: #C4DAED;
+	// background-color: rgba(41, 0, 37, 1);
+	// background-color: rgba(234, 234, 234, 1);
+}
 
+#head_bar{
+	// background-color: #C7B6DA;
+	// background-color: #CBCBCB;
+	background-color: rgba(243, 243, 243, 1);
+}
+
+.channel_header{
+	vertical-align: middle;
+	position: relative;
+	left: 80px;
+}

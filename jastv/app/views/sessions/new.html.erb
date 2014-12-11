@@ -1,0 +1,22 @@
+
+<div class="pure-form" id="user-form">
+
+<%= form_tag sessions_path, method: :post do %>
+
+	<%= text_field_tag :email, params[:email], placeholder: "Email" %>
+	<%= text_field_tag :password, params[:password], placeholder: "Password" %>
+
+
+	<%= submit_tag 'SIGN IN' %>
+
+<% end %>
+
+</div>
+
+
+
+
+
+
+
+

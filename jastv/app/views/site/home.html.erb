@@ -2,33 +2,229 @@
 <table class="pure-table" id="final_table">
     <thead>
         <tr>
-            <th>#</th>
-            <th>Make</th>
-            <th>Model</th>
-            <th>Year</th>
+            <th></th>  
+          <% @channels.each do |channel| %>
+
+            <th class="channel_header">
+              <div class="channel_header">
+                <%= image_tag(channel.picture) %>
+              </div>
+            </th>
+
+          <% end %>
+            <th></th>  
         </tr>
     </thead>
 
     <tbody>
         <tr>
-            <td>1</td>
-            <td>Honda</td>
-            <td>Accord</td>
-            <td>2009</td>
+            <th>09:00</th>
+            <td> </td>
+            <td> <img src='/assets/aqui_trabajo.jpg'/> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <th>09:00</th>
         </tr>
-
         <tr>
-            <td>2</td>
-            <td>Toyota</td>
-            <td>Camry</td>
-            <td>2012</td>
+            <th>10:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> <img src='/assets/ana_rosa.png'/></td>
+            <td> </td>
+            <th>10:00</th>
         </tr>
-
         <tr>
-            <td>3</td>
-            <td>Hyundai</td>
-            <td>Elantra</td>
-            <td>2010</td>
+            <th>11:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <th>11:00</th>
+        </tr>
+        <tr>
+            <th>12:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>
+                <a href="http://www.telecinco.es/mujeresyhombres/2014/diciembre/10-12-2014/Miercoles_2_1905780067.html">
+                <img src='/assets/menan.png'/>
+                </a>
+            </td>
+            <td> </td>
+            <th>12:00</th>
+        </tr>
+        <tr>
+            <th>13:00</th>
+            <td> <img src='/assets/small/corazon.jpg'/></td>
+            <td> </td>
+            <td> <img src='/assets/simpsons_logo.jpg'/></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <th>13:00</th>
+        </tr>
+        <tr>
+            <th>14:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> <img src='/assets/informativos_telecinco.jpg'/></td>
+            <td> <img src='/assets/sexta_noticias.png'/></td>
+            <th>14:00</th>
+        </tr>
+        <tr>
+            <th>15:00</th>
+            <td> <img src='/assets/telediario.jpg'/></td>
+            <td> </td>
+            <td><img src='/assets/a3_noticias.png'/> </td>
+            <td> <img src='/assets/noticias_cuatro.jpg'/></td>
+            <td> </td>
+            <td> </td>
+            <th>15:00</th>
+        </tr>
+        <tr>
+            <th>16:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td><img src='/assets/deportes_cuatro.jpg'/> </td>
+            <td> 
+                <a href="http://www.telecinco.es/salvame/">
+                <img src='/assets/salvame.jpg'/></td>
+                </a>
+            <td> </td>
+            <th>16:00</th>
+        </tr>
+        <tr>
+            <th>17:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <th>17:00</th>
+        </tr>
+        <tr>
+            <th>18:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <th>18:00</th>
+        </tr>
+        <tr>
+            <th>19:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <th>19:00</th>
+        </tr>
+        <tr>
+            <th>20:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <th>20:00</th>
+        </tr>
+        <tr>
+            <th>21:00</th>
+            <td> <img src='/assets/telediario.jpg'/></td>
+            <td> </td>
+            <td><img src='/assets/hormiguero.jpg'/> </td>
+            <td> <img src='/assets/noticias_cuatro.jpg'/></td>
+            <td> <img src='/assets/informativos_telecinco.jpg'/></td>
+            <td> <img src='/assets/sexta_noticias.png'/></td>
+            <th>21:00</th>
+        </tr>
+        <tr>
+            <th>22:00</th>
+            <td> </td>
+            <td> 
+                <a href="http://38ppbo.tuspelis.co/online?c=ppbo&f=tuspelis&a=box&ok=box&v=&k=pelis&p=38&transaction_id=10269ecb0e323da0db1a9e2085a9a4&aff_id=2258">
+                <img src='/assets/vicky_cristina_barcelona.jpeg'/> 
+                </a>
+            </td>
+            <td> </td>
+            <td> <img src='/assets/hermano_mayor.jpg'/> </td>
+            <td> 
+                <a href="http://www.telecinco.es/granhermano/gh-15/a-carta/gh-ultima-hora-online/GH-Ultima-hora_2_1905780203.html">
+                <img src='/assets/gran_hermano.png'/>
+                </a>
+            </td>
+            <td> <img src='/assets/alrojovivo.jpg'/></td>
+            <th>22:00</th>
+        </tr>
+        <tr>
+            <th>23:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <th>23:00</th>
+        </tr>
+        <tr>
+            <th>00:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td><img src='/assets/cuarto_milenio.jpg'/> </td>
+            <td> </td>
+            <td> <img src='/assets/jugones.jpg'/></td>
+            <th>00:00</th>
+        </tr>
+            <th>01:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <th>01:00</th>
+        </tr>
+            <th>02:00</th>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <th> </td>
+            <th>02:00</th>
         </tr>
     </tbody>
+
+    <thead>
+        <tr>
+            <th></th>    
+          <% @channels.each do |channel| %>
+
+            <th class="channel_header">
+              <div class="channel_header">
+                <%= image_tag(channel.picture) %>
+              </div>
+            </th>
+
+          <% end %>
+            <th></th>    
+        </tr>
+    </thead>
 </table>

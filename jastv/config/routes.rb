@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
  get '/index' => 'site#index'
 
+
     resources :channels do
       resources :programs
     end
@@ -13,4 +14,6 @@ Rails.application.routes.draw do
         resources :episodes, shallow: true
  	  end
     end
+
+    resources :sessions
 end
