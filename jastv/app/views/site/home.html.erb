@@ -1,3 +1,35 @@
+    
+          <% @episodes.each do |episode| %>
+             
+                <% if episode.showed_at %>
+               <%= r = episode.showed_at.hour%> |
+               <% end %>
+
+               <% if r == 14 %>
+
+               <p> patata </p>   
+               ---<%= episode.program_id %>----    
+                <br>
+               <% end %> 
+
+          <% end %>
+
+
+<br>chantoisme<br>
+
+     <%= @program.each do |programs| %>
+        <% programs.episodes.each do |episode| %> 
+        
+      --  <%= episode.channel.name %> --
+          <%= episode.program.name %> -- 
+          <%= episode.program.picture %>
+     <br>
+        <% end %>
+    <% end %>   
+
+
+
+
 
 <table class="pure-table" id="final_table">
     <thead>
@@ -19,6 +51,7 @@
     <tbody>
         <tr>
             <th>09:00</th>
+
             <td> <img src='/assets/desayunos.jpg'/> </td>
             <td> <img src='/assets/aqui_trabajo.jpg'/> </td>
             <td> <img src='/assets/espejo_publico.jpg'/> </td>

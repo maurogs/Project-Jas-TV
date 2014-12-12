@@ -9,12 +9,14 @@ class ApplicationController < ActionController::Base
     	@current_user ||= User.find(session[:user_id])
      end
 
-  	 rescue ActiveRecord::RecordNotFound
+   rescue ActiveRecord::RecordNotFound
     	@current_user = nil
-  	 end
+   end
 
 	 def logged_in?
-  		!!current_user
+  	   	!!current_user
 	 end
+
+   helper_method :logged_in?, :current_user
 	 
-   end
+end

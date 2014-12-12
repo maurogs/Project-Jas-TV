@@ -47,7 +47,7 @@ class Admin::EpisodesController < ApplicationController
 	private
 
 	def episode_params
-		params.require(:episode).permit(:program_id, :channel_id, :showed_at)
+		params.require(:episode).permit(:program_id, :channel_id, :showed_at, :duration)
 	end
 
 
