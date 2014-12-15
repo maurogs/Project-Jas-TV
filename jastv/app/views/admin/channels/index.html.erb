@@ -11,7 +11,7 @@
   <tbody>
      <%= content_tag_for :tr, @channels do |channel| %>
         <td> ID: <%= channel.id %> -- <%= link_to(channel.name, channels_path) %> </td>
-        <td> <%= link_to('Edit', edit_admin_channel_path(channel)) %> 
+        <td id="buttons_edit"> <%= link_to('Edit', edit_admin_channel_path(channel)) %> 
 			 <%= link_to('Delete', admin_channel_path(channel), method: :delete, data: {confirm: 'Are you sure?'}) %>
         </td>
 

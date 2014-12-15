@@ -1,8 +1,8 @@
-<div class="table">
+<div>
 <table class="pure-table" id="table-long" border="10">
   <thead>
     <tr>
-      <th> EPISODE NAME </th>
+      <th> EPISODE</th>
       <th> CHANNEL</th>
       <th> DATETIME</th>
       <th> DURATION</th>
@@ -14,8 +14,8 @@
      <%= content_tag_for :tr, @program do |programs| %>
         <% programs.episodes.each do |episode| %> 
       <tr>
-       <td> <%= episode.program.name %> </td>
-       <td> <%= episode.channel.name %> </td>
+       <td> <img src='/assets/<%= episode.program.picture %>'/> </td>
+       <td> <img src='/assets/<%= episode.channel.picture %>'/> </td>
        <td> <%= episode.showed_at %> </td>  
        <td> <%= episode.duration %> </td> 
        <td> <%= link_to('Edit', edit_admin_episode_path(episode)) %> 
@@ -32,13 +32,15 @@
       </th>
       <th> </th>
       <th> </th>
+      <th> </th>
 
-    <div class="pure-button">
-      <th> <%= link_to('Back', admin_programs_path) %> 
-    </div>
-
+      <th>
+      <div class="pure-button">
+      <%= link_to('Back', admin_programs_path) %>
+      </div>
       </th>
      </tr>
+
   </tbody>
 </table> 
 </div>

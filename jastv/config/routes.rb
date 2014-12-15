@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- get '/' => 'site#home'
+ get '/', to: 'site#home', as: :home
 
  get '/index' => 'site#index'
 

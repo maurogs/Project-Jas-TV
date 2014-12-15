@@ -1,3 +1,55 @@
+<div id="buttons_selectors">
+    <style scoped>
+
+        .button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+        .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
+        .button-warning {
+            background: rgb(223, 117, 20); /* this is an orange */
+        }
+
+        .button-secondary {
+            background: rgb(66, 184, 221); /* this is a light blue */
+        }
+
+    </style>
+
+    <button class="button-success pure-button">Noticias</button>
+    <button class="button-error pure-button">Social</button>
+    <button class="button-warning pure-button">Concursos</button>
+    <button class="button-secondary pure-button">Corazón</button>
+
+    <button class="button-success pure-button">Realitys</button>
+    <button class="button-error pure-button">Shows</button>
+    <button class="button-warning pure-button">Cocina</button>
+    <button class="button-secondary pure-button">Series</button>
+
+    <button class="button-success pure-button">Deportes</button>
+    <button class="button-error pure-button">Documentales</button>
+    <button class="button-warning pure-button">Cine</button>
+</div>
+
+<br>
+
+
+
+
+
+
 
 <table class="pure-table" id="final_table">
     <thead>
@@ -20,20 +72,20 @@
 
         <% (9..24).each do |hour| %>
 
-        <tr>
+        <tr id="<%= hour %>">
             <th> <%= hour %>:00 </th>
  
             <% @channels.each do |channel| %>
              
                 <td>
                     <% em = channel.episodes.find do |epi| %>  
-
                         <% if epi.showed_at && epi.showed_at.hour == hour %> 
-                            <img src='/assets/<%= epi.program.picture %>'/> 
+                            <div class='<%= epi.program_id %>'>
+                                <img src='/assets/<%= epi.program.picture %>'/> 
+                            <%= epi.program_id %>
+                            </div>
                         <% end %>    
-                        
                     <% end %>
-
                 </td>
 
             <% end %>
@@ -61,3 +113,56 @@
     </thead>
 
 </table>
+
+<br>
+
+
+<div id="buttons_selectors">
+    <style scoped>
+
+        .button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+        .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
+        .button-warning {
+            background: rgb(223, 117, 20); /* this is an orange */
+        }
+
+        .button-secondary {
+            background: rgb(66, 184, 221); /* this is a light blue */
+        }
+
+    </style>
+    
+    <button class="button-success pure-button">Noticias</button>
+
+    <button class="button-error pure-button">Social</button>
+    <button class="button-warning pure-button">Concursos</button>
+    <button class="button-secondary pure-button">Corazón</button>
+
+    <button class="button-success pure-button">Realitys</button>
+    <button class="button-error pure-button">Shows</button>
+    <button class="button-warning pure-button">Cocina</button>
+    <button class="button-secondary pure-button">Series</button>
+
+    <button class="button-success pure-button">Deportes</button>
+    <button class="button-error pure-button">Documentales</button>
+    <button class="button-warning pure-button">Cine</button>
+</div>
+
+<br>
+<br>
+
