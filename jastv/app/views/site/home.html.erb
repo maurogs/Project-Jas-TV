@@ -1,35 +1,3 @@
-    
-          <% @episodes.each do |episode| %>
-             
-                <% if episode.showed_at %>
-               <%= r = episode.showed_at.hour%> |
-               <% end %>
-
-               <% if r == 14 %>
-
-               <p> patata </p>   
-               ---<%= episode.program_id %>----    
-                <br>
-               <% end %> 
-
-          <% end %>
-
-
-<br>chantoisme<br>
-
-     <%= @program.each do |programs| %>
-        <% programs.episodes.each do |episode| %> 
-        
-      --  <%= episode.channel.name %> --
-          <%= episode.program.name %> -- 
-          <%= episode.program.picture %>
-     <br>
-        <% end %>
-    <% end %>   
-
-
-
-
 
 <table class="pure-table" id="final_table">
     <thead>
@@ -49,196 +17,31 @@
     </thead>
 
     <tbody>
-        <tr>
-            <th>09:00</th>
 
-            <td> <img src='/assets/desayunos.jpg'/> </td>
-            <td> <img src='/assets/aqui_trabajo.jpg'/> </td>
-            <td> <img src='/assets/espejo_publico.jpg'/> </td>
-            <td> <img src='/assets/encantador_perros.jpg'/> </td>
-            <td> <img src='/assets/ana_rosa.png'/> </td>
-            <td> <img src='/assets/crimenes_imperfectos.jpg'/> </td>
-            <th>09:00</th>
-        </tr>
+        <% (9..24).each do |hour| %>
+
         <tr>
-            <th>10:00</th>
-            <td> </td>
-            <td> <img src='/assets/aventura_del_saber.png'/> </td>
-            <td> </td>
-            <td> <img src='/assets/alerta_cobra.jpg'/> </td>
-            <td> </td>
-            <td> </td>
-            <th>10:00</th>
+            <th> <%= hour %>:00 </th>
+ 
+            <% @channels.each do |channel| %>
+             
+                <td>
+                    <% em = channel.episodes.find do |epi| %>  
+
+                        <% if epi.showed_at && epi.showed_at.hour == hour %> 
+                            <img src='/assets/<%= epi.program.picture %>'/> 
+                        <% end %>    
+                        
+                    <% end %>
+
+                </td>
+
+            <% end %>
+            <th> <%= hour %>:00 </th>
         </tr>
-        <tr>
-            <th>11:00</th>
-            <td> <img src='/assets/la_manana.png'/> </td>
-            <td> <img src='/assets/ciudad_hormigas.png'/> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> <img src='/assets/investigadores_forenses.jpg'/> </td>
-            <th>11:00</th>
-        </tr>
-        <tr>
-            <th>12:00</th>
-            <td> </td>
-            <td> <img src='/assets/para_todos_2.jpg'/> </td>
-            <td> <img src='/assets/en_tu_cocina.jpg'/> </td>
-            <td> <img src='/assets/mananas_cuatro.jpg'/> </td>
-            <td>
-                <a href="http://www.telecinco.es/mujeresyhombres/2014/diciembre/10-12-2014/Miercoles_2_1905780067.html">
-                <img src='/assets/menan.png'/>
-                </a>
-            </td>
-            <td> <img src='/assets/informe_criminal.jpg'/> </td>
-            <th>12:00</th>
-        </tr>
-        <tr>
-            <th>13:00</th>
-            <td> </td>
-            <td> </td>
-            <td> <img src='/assets/ruleta.jpg'/></td>
-            <td> </td>
-            <td> </td>
-            <td> <img src='/assets/alrojovivo.jpg'/> </td>
-            <th>13:00</th>
-        </tr>
-        <tr>
-            <th>14:00</th>
-            <td> <img src='/assets/small/corazon.jpg'/> </td>
-            <td> <img src='/assets/amar_en_tiempos.jpg'/> </td>
-            <td> <img src='/assets/simpsons_logo.jpg'/> </td>
-            <td> <img src='/assets/noticias_cuatro.jpg'/> </td>
-            <td> <img src='/assets/robin_food.jpg'/></td>
-            <td> <img src='/assets/sexta_noticias.png'/></td>
-            <th>14:00</th>
-        </tr>
-        <tr>
-            <th>15:00</th>
-            <td> <img src='/assets/telediario.jpg'/></td>
-            <td> <img src='/assets/cuentame_como_paso.jpg'/> </td>
-            <td><img src='/assets/a3_noticias.png'/> </td>
-            <td> <img src='/assets/deportes_cuatro.jpg'/></td>
-            <td> <img src='/assets/informativos_telecinco.jpg'/> </td>
-            <td> <img src='/assets/zapeando.jpg'/> </td>
-            <th>15:00</th>
-        </tr>
-        <tr>
-            <th>16:00</th>
-            <td> </td>
-            <td> <img src='/assets/saber_ganar.jpg'/> </td>
-            <td> <img src='/assets/amar_siempre.jpg'/> </td>
-            <td><img src='/assets/castle.jpg'/> </td>
-            <td> 
-                <a href="http://www.telecinco.es/salvame/">
-                <img src='/assets/salvame.jpg'/></td>
-                </a>
-            <td> </td>
-            <th>16:00</th>
-        </tr>
-        <tr>
-            <th>17:00</th>
-            <td> </td>
-            <td> <img src='/assets/grandes_documentales.jpg'/> </td>
-            <td> <img src='/assets/puente_viejo.jpg'/> </td>
-            <td> </td>
-            <td> </td>
-            <td> <img src='/assets/mas-vale-tarde2.jpg'/> </td>
-            <th>17:00</th>
-        </tr>
-        <tr>
-            <th>18:00</th>
-            <td> <img src='/assets/esp_directo.jpg'/> </td>
-            <td> <img src='/assets/docufilia.jpg'/> </td>
-            <td> <img src='/assets/ahora_caigo.jpg'/> </td>
-            <td> <img src='/assets/hawai.jpg'/> </td>
-            <td> </td>
-            <td> </td>
-            <th>18:00</th>
-        </tr>
-        <tr>
-            <th>19:00</th>
-            <td> </td>
-            <td> <img src='/assets/para_todos_2.jpg'/> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <th>19:00</th>
-        </tr>
-        <tr>
-            <th>20:00</th>
-            <td> <img src='/assets/saber_ganar.jpg'/> </td>
-            <td> <img src='/assets/tragedia_electronica.jpg'/> </td>
-            <td> <img src='/assets/boom.jpg'/> </td>
-            <td> <img src='/assets/noticias_cuatro.jpg'/> </td>
-            <td> <img src='/assets/pasapalabra.jpg'/> </td>
-            <td> <img src='/assets/sexta_noticias.png'/> </td>
-            <th>20:00</th>
-        </tr>
-        <tr>
-            <th>21:00</th>
-            <td> <img src='/assets/telediario.jpg'/></td>
-            <td> </td>
-            <td><img src='/assets/a3_noticias.png'/> </td>
-            <td> <img src='/assets/deportes_cuatro.jpg'/></td>
-            <td> <img src='/assets/informativos_telecinco.jpg'/></td>
-            <td> <img src='/assets/intermedio.jpg'/></td>
-            <th>21:00</th>
-        </tr>
-        <tr>
-            <th>22:00</th>
-            <td> <img src='/assets/aguila_roja.jpg'/> </td>
-            <td> <img src='/assets/apocalipsis_guerra.jpg'/> </td>
-            <td> <img src='/assets/hormiguero.jpg'/> </td>
-            <td> <img src='/assets/hermano_mayor.jpg'/> </td>
-            <td> 
-                <a href="http://www.telecinco.es/granhermano/gh-15/a-carta/gh-ultima-hora-online/GH-Ultima-hora_2_1905780203.html">
-                <img src='/assets/gran_hermano.png'/>
-                </a>
-            </td>
-            <td> <img src='/assets/alrojovivo.jpg'/></td>
-            <th>22:00</th>
-        </tr>
-        <tr>
-            <th>23:00</th>
-            <td> </td>
-            <td> </td>
-            <td> <img src='/assets/star_trek.jpg'/> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <th>23:00</th>
-        </tr>
-        <tr>
-            <th>00:00</th>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td><img src='/assets/cuarto_milenio.jpg'/> </td>
-            <td> </td>
-            <td> <img src='/assets/jugones.jpg'/></td>
-            <th>00:00</th>
-        </tr>
-            <th>01:00</th>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <th>01:00</th>
-        </tr>
-            <th>02:00</th>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <th> </td>
-            <th>02:00</th>
-        </tr>
+
+        <% end %>
+
     </tbody>
 
     <thead>
@@ -256,4 +59,5 @@
             <th></th>    
         </tr>
     </thead>
+
 </table>

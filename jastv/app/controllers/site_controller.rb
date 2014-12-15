@@ -1,7 +1,8 @@
 class SiteController < ApplicationController
 	def home
-		@channels = Channel.all
-		@episodes = Episode.all
+		@channels = Channel.order(id: :asc)
+		
+		@episodes = Episode.order(showed_at: :asc)
 		@program = Program.all
 	end
 
