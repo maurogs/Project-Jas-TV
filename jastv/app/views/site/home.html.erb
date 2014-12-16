@@ -1,46 +1,21 @@
 <div id="buttons_selectors">
-    <style scoped>
 
-        .button-success,
-        .button-error,
-        .button-warning,
-        .button-secondary {
-            color: white;
-            border-radius: 4px;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-        }
 
-        .button-success {
-            background: rgb(28, 184, 65); /* this is a green */
-        }
+    <button class="button-success pure-button toggleButton" data-type="noticias">Noticias</button>
 
-        .button-error {
-            background: rgb(202, 60, 60); /* this is a maroon */
-        }
+    <button class="button-error pure-button toggleButton" data-type="social">Social</button>
+    <button class="button-warning pure-button toggleButton" data-type="concurso">Concursos</button>
+    <button class="button-secondary pure-button toggleButton" data-type="corazon">Corazón</button>
 
-        .button-warning {
-            background: rgb(223, 117, 20); /* this is an orange */
-        }
+    <button class="button-success pure-button toggleButton" data-type="reality">Realitys</button>
+    <button class="button-error pure-button toggleButton" data-type="show">Shows</button>
+    <button class="button-warning pure-button toggleButton" data-type="cocina">Cocina</button>
+    <button class="button-secondary pure-button toggleButton" data-type="politica">Politica</button>
 
-        .button-secondary {
-            background: rgb(66, 184, 221); /* this is a light blue */
-        }
-
-    </style>
-
-    <button class="button-success pure-button">Noticias</button>
-    <button class="button-error pure-button">Social</button>
-    <button class="button-warning pure-button">Concursos</button>
-    <button class="button-secondary pure-button">Corazón</button>
-
-    <button class="button-success pure-button">Realitys</button>
-    <button class="button-error pure-button">Shows</button>
-    <button class="button-warning pure-button">Cocina</button>
-    <button class="button-secondary pure-button">Series</button>
-
-    <button class="button-success pure-button">Deportes</button>
-    <button class="button-error pure-button">Documentales</button>
-    <button class="button-warning pure-button">Cine</button>
+    <button class="button-success pure-button toggleButton" data-type="deportes">Deportes</button>
+    <button class="button-error pure-button toggleButton"  data-type="documental">Documentales</button>
+    <button class="button-warning pure-button toggleButton" data-type="cine">Cine</button>
+    <button class="button-secondary pure-button toggleButton" data-type="serie">Series</button>
 </div>
 
 <br>
@@ -80,9 +55,8 @@
                 <td>
                     <% em = channel.episodes.find do |epi| %>  
                         <% if epi.showed_at && epi.showed_at.hour == hour %> 
-                            <div class='<%= epi.program_id %>'>
+                            <div class='<%= epi.program.genre %>'>
                                 <img src='/assets/<%= epi.program.picture %>'/> 
-                            <%= epi.program_id %>
                             </div>
                         <% end %>    
                     <% end %>
@@ -90,6 +64,30 @@
 
             <% end %>
             <th> <%= hour %>:00 </th>
+        </tr>
+
+        <% end %>
+
+        <% (0..1).each do |hour| %>
+
+        <tr id="<%= hour %>">
+            <th> 0<%= hour %>:00 </th>
+ 
+            <% @channels.each do |channel| %>
+             
+                <td>
+                    <% em = channel.episodes.find do |epi| %>  
+                        <% if epi.showed_at && epi.showed_at.hour == hour %> 
+                            <div class='<%= epi.program.genre %>'>
+                                <img src='/assets/<%= epi.program.picture %>'/> 
+                            <%= epi.program.genre %>
+                            </div>
+                        <% end %>    
+                    <% end %>
+                </td>
+
+            <% end %>
+            <th> 0<%= hour %>:00 </th>
         </tr>
 
         <% end %>
@@ -118,49 +116,22 @@
 
 
 <div id="buttons_selectors">
-    <style scoped>
-
-        .button-success,
-        .button-error,
-        .button-warning,
-        .button-secondary {
-            color: white;
-            border-radius: 4px;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-        }
-
-        .button-success {
-            background: rgb(28, 184, 65); /* this is a green */
-        }
-
-        .button-error {
-            background: rgb(202, 60, 60); /* this is a maroon */
-        }
-
-        .button-warning {
-            background: rgb(223, 117, 20); /* this is an orange */
-        }
-
-        .button-secondary {
-            background: rgb(66, 184, 221); /* this is a light blue */
-        }
-
-    </style>
     
-    <button class="button-success pure-button">Noticias</button>
+    <button class="button-success pure-button toggleButton" data-type="noticias">Noticias</button>
 
-    <button class="button-error pure-button">Social</button>
-    <button class="button-warning pure-button">Concursos</button>
-    <button class="button-secondary pure-button">Corazón</button>
+    <button class="button-error pure-button toggleButton" data-type="social">Social</button>
+    <button class="button-warning pure-button toggleButton" data-type="concurso">Concursos</button>
+    <button class="button-secondary pure-button toggleButton" data-type="corazon">Corazón</button>
 
-    <button class="button-success pure-button">Realitys</button>
-    <button class="button-error pure-button">Shows</button>
-    <button class="button-warning pure-button">Cocina</button>
-    <button class="button-secondary pure-button">Series</button>
+    <button class="button-success pure-button toggleButton" data-type="reality">Realitys</button>
+    <button class="button-error pure-button toggleButton" data-type="show">Shows</button>
+    <button class="button-warning pure-button toggleButton" data-type="cocina">Cocina</button>
+    <button class="button-secondary pure-button toggleButton" data-type="politica">Politica</button>
 
-    <button class="button-success pure-button">Deportes</button>
-    <button class="button-error pure-button">Documentales</button>
-    <button class="button-warning pure-button">Cine</button>
+    <button class="button-success pure-button toggleButton" data-type="deportes">Deportes</button>
+    <button class="button-error pure-button toggleButton"  data-type="documental">Documentales</button>
+    <button class="button-warning pure-button toggleButton" data-type="cine">Cine</button>
+    <button class="button-secondary pure-button toggleButton" data-type="serie">Series</button>
 </div>
 
 <br>
