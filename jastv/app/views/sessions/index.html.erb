@@ -5,3 +5,6 @@
 
 Login: <%= current_user.username %>
 
+
+<%= link_to "Log out!", session_path("current"), method: :delete %>
+

@@ -54,7 +54,7 @@
              
                 <td>
                     <% em = channel.episodes.find do |epi| %>  
-                        <% if epi.showed_at && epi.showed_at.hour == hour %> 
+                        <% if epi.showed_at && epi.showed_at.hour == hour && @programs.include?(epi.program) %> 
                             <div id='<%= epi.id %>' class='<%= epi.program.genre %>'>
                                 <img src='/assets/<%= epi.program.picture %>'/> 
                             </div>

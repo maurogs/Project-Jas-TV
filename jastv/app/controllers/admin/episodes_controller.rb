@@ -1,4 +1,4 @@
-class Admin::EpisodesController < ApplicationController
+class Admin::EpisodesController < Admin::BaseController
 
 
 

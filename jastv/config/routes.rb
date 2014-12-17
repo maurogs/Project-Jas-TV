@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- get '/', to: 'site#home', as: :home
+ 
 
  get '/index' => 'site#index'
 
@@ -16,4 +16,6 @@ Rails.application.routes.draw do
     end
 
     resources :sessions
+	get '/', to: 'site#home', as: :home
+    root to: 'site#home'
 end

@@ -4,7 +4,7 @@
     Select Channel: 
   </span>
   <span id="col_select">
-  <%= collection_select :channels, :id, @channel, :id, :name %>
+  <%= collection_select :channels, :id, @channel, :name, :name %>
   </span>
   <button type="submit" class="pure-button btn"> Search </button>
   <hr>
@@ -13,7 +13,7 @@
 
 
 <% @channel.each do |chan| %>
-  <div id='<%= chan.name.downcase.delete(' ') %>'>
+  <div id='<%= chan.name.downcase.delete(' ') %>' class='channels_tables'>
 
     <table class="pure-table" id="table-xl" border="10">
     
