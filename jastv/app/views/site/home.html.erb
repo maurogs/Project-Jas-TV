@@ -55,7 +55,7 @@
                 <td>
                     <% em = channel.episodes.find do |epi| %>  
                         <% if epi.showed_at && epi.showed_at.hour == hour %> 
-                            <div class='<%= epi.program.genre %>'>
+                            <div id='<%= epi.id %>' class='<%= epi.program.genre %>'>
                                 <img src='/assets/<%= epi.program.picture %>'/> 
                             </div>
                         <% end %>    
@@ -113,7 +113,7 @@
 </table>
 
 <br>
-
+<br>
 
 <div id="buttons_selectors">
     

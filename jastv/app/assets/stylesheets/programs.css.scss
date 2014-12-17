@@ -1,3 +1,73 @@
 // Place all the styles related to the programs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#col_select{
+	margin-left: 40px;
+}
+
+#channels_id{
+   background: transparent;
+   width: 120px;
+   padding: 5px;
+   font-size: 20px;
+   border: 2px solid #ccc;
+   height: 35px;
+   -webkit-appearance: none;
+   text-align: center;
+}
+
+.btn{
+	margin-left: 38px;
+}
+
+#collection_title{
+	font-size: 120%;
+}
+
+#channel_collection{
+	width: 100%;
+	text-align: center;
+	padding-right: 54px;
+}
+
+
+#table-xl{
+	width: 40%;
+	text-align: center;
+	color: black;
+	font-size: 120%;
+}
+
+
+#tve{
+	display: none;
+	margin-left: 380px;
+}
+
+#la2{
+	display: none;	
+	margin-left: 380px;
+}
+
+#antena3{
+	display: none;	
+	margin-left: 380px;
+}
+
+#cuatro{
+	display: none;	
+	margin-left: 380px;
+}
+
+#telecinco{
+	display: none;	
+	margin-left: 380px;
+}
+
+#lasexta{
+	display: none;
+	margin-left: 380px;
+}
+

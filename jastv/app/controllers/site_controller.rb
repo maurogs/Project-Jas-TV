@@ -7,7 +7,6 @@ class SiteController < ApplicationController
 	end
 
 	def index
-		@programs = Program.all
-
+		@channel = Channel.order(id: :asc)
 	end
 end
