@@ -2,20 +2,32 @@
 <div class="pure-form" id="user-form">
 
 <%= form_tag sessions_path, method: :post do %>
+    
+    <h2 class="center"> Inicio de Sesión: </h2>
 
 	<%= text_field_tag :email, params[:email], placeholder: "Usuario o email" %>
 	<%= password_field_tag :password, params[:password], placeholder: "Password" %>
 
-
 	<%= submit_tag 'Iniciar Sesión', class: 'pure-button' %>
+	<div id="flash"> </div>
 
 <% end %>
 
 </div>
 
 
+<style type="text/css">
+          .center{
+            text-align: center;
+          }
+          #flash{
+            text-align: center;
+          }
+</style>
 
-
+<script>
+  $('#flash').html('<%= flash[:notice] %>');
+</script>
 
 
 

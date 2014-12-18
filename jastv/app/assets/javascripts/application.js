@@ -15,3 +15,15 @@
 //= require turbolinks
 //= require_tree .
 
+
+// $(document).ready(function(){
+
+
+
+// 	$('#sign_in_button').click(function(){
+// 		// alert("kajnskd");
+// 		$('#flash').show();
+
+// 	});
+
+// });

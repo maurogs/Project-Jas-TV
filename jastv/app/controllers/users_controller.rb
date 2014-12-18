@@ -10,7 +10,8 @@ class UsersController < ApplicationController
 			session[:user_id] = @user_new.id
 			redirect_to root_path
 		else
-			render 'new'
+			flash[:notice] = "Rellena todos los campos"
+			redirect_to new_user_path
 		end
 	end
 
