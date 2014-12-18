@@ -6,8 +6,12 @@ class User < ActiveRecord::Base
 	has_many :horrible_programs, -> { Vote.disliked }, through: :votes, source: :program
 	has_many :indiferent_programs, -> { Vote.indiferent }, through: :votes, source: :program
 
+	validates :username, uniqueness: true, presence: true
+	validates :email, uniqueness: true, presence: true
+	validates :first_name, :last_name, :password, presence: true
+
 	def self.authenticate(email, password)
-		user = where(email: email).first
+		user = where("email = ? or username = ?",email, email).first
 		user && user.authenticate(password) ? user : nil
 	end
 

@@ -10,7 +10,7 @@
 <header>
 <div class="header">
     <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed" id="head_bar">
-        <a class="pure-menu-heading" href="<%= home_path %>">Jas TV</a>
+        <%= link_to "Jas TV", root_path, method: :get, class: "pure-menu-heading" %>
 
 
         <ul>
@@ -21,18 +21,24 @@
             <li class=<%= current_page?(admin_programs_path) ? 'pure-menu-selected' : '' %>>
               <%= link_to "Programs", admin_programs_path %>
             </li>
-            <li class=<%= current_page?(channels_path) ? 'pure-menu-selected' : '' %>>
-              <%= link_to "Episodes", channels_path %>              
+            <li class=<%= current_page?(channels_path) ? 'pure-menu-selected' : 'admin_controls' %>>
+              <%= link_to "Episodes", index_path, method: :get %>              
             </li>
         <% end %>
 
         <% if logged_in? %>
+          <li id="username_header">
+            <%= link_to current_user.username, sessions_path %>
+          </li>
           <li>
             <%= link_to "Log out", session_path("current"), method: :delete %>
           </li>
         <% else %>
           <li class=<%= current_page?(new_session_path) ? 'pure-menu-selected' : '' %>>
-            <%= link_to "Log in", new_session_path %>
+            <%= link_to "Registrarse", new_user_path %>
+          </li>
+          <li class=<%= current_page?(new_session_path) ? 'pure-menu-selected' : '' %>>
+            <%= link_to "Iniciar Sesión", new_session_path %>
           </li>
         <% end %>
         </ul>

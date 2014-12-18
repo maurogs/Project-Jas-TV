@@ -18,4 +18,7 @@ Rails.application.routes.draw do
     resources :sessions
 	get '/', to: 'site#home', as: :home
     root to: 'site#home'
+
+    resources :users
+
 end

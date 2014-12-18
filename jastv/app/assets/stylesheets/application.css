@@ -12,6 +12,7 @@
  *
  *= require logos
  *= require site
+ *= require users
  *= require channels
  *= require programs
  *= require marketing
