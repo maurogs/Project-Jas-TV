@@ -57,6 +57,7 @@
                         <% if epi.showed_at && epi.showed_at.hour == hour && @programs.include?(epi.program) %> 
                             <div id='<%= epi.id %>' class='<%= epi.program.genre %>'>
                                 <img src='/assets/<%= epi.program.picture %>'/> 
+                                
                             </div>
                         <% end %>    
                     <% end %>
@@ -80,7 +81,6 @@
                         <% if epi.showed_at && epi.showed_at.hour == hour %> 
                             <div class='<%= epi.program.genre %>'>
                                 <img src='/assets/<%= epi.program.picture %>'/> 
-                            <%= epi.program.genre %>
                             </div>
                         <% end %>    
                     <% end %>

@@ -10,7 +10,8 @@
 <header>
 <div class="header">
     <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed" id="head_bar">
-        <%= link_to "Jas TV", root_path, method: :get, class: "pure-menu-heading" %>
+
+        <%= link_to image_tag('/assets//logo.png'), root_path, method: :get, class: "pure-menu-heading" %>
 
 
         <ul>
@@ -27,8 +28,8 @@
         <% end %>
 
         <% if logged_in? %>
-          <li id="username_header">
-            <%= link_to current_user.username, sessions_path %>
+          <li>
+            <%= link_to current_user.username.titleize, sessions_path, class: "pure button" %>
           </li>
           <li>
             <%= link_to "Log out", session_path("current"), method: :delete %>
